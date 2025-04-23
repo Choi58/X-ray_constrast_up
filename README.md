@@ -1,31 +1,21 @@
-# 🔬 X-ray Contrast Enhancement using PCHIP
+# 🔬 X-ray Contrast Enhancement using Multi-Frequency Histogram and PCHIP
 
-This project enhances the contrast of X-ray images using histogram analysis and PCHIP (Piecewise Cubic Hermite Interpolating Polynomial) interpolation. It was originally developed for a school project in 2019 and implements a custom image enhancement method aimed at medical imaging clarity.
+> 📌 This project was presented as a poster at **IPIU 2020** (Image Processing and Image Understanding Workshop).  
+> **Title:** 다중 주파수를 이용한 X선 촬영 이미지의 대비 향상 알고리즘  
+> **Date:** 2020.02
 
----
-
-## 📌 Overview
-
-X-ray images often suffer from low contrast, making it difficult to identify fine structures. This project proposes a method that:
-- Extracts meaningful control points from the image histogram.
-- Applies PCHIP interpolation to generate a smooth and contrast-enhancing mapping curve.
-- Enhances the image by applying this transformation.
-
----
+This repository implements a contrast enhancement algorithm for X-ray images using multi-frequency histogram analysis and Piecewise Cubic Hermite Interpolating Polynomial (PCHIP) interpolation. The method improves the visibility of bone structures by analyzing the image histogram and applying a smooth intensity mapping.
 
 ## 🛠 Features
 
-- Histogram-based contrast point selection
-- PCHIP interpolation to preserve monotonicity and smoothness
+- Multi-frequency histogram analysis for contrast mapping
+- PCHIP interpolation to preserve smooth, monotonic transformations
+- MATLAB-based implementation
 - Visualization of enhancement results
-- MATLAB implementation
+- 실험적으로 다양한 k값에 따른 비교 (`k=15~18`)
 
----
+## 📊 Experimental Comparison
 
-## 🚀 How to Run
-
-1. Open `Enhancing_Contrast.m` in MATLAB.
-2. Set the image path or use the built-in sample image.
-3. Run the script to generate enhanced results and plots.
-
-
+📄 See [elbow.pdf](elbow.pdf)  
+This document compares the effect of varying the number of control points (`k=15~18`) on contrast enhancement.  
+It includes annotated images highlighting the clarity of bone boundaries (ulna, radius, humerus).
